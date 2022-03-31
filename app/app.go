@@ -152,7 +152,6 @@ var signatures = map[string][]string{
 	"2.17.1": []string{
 		"7e9ee383f6c730557c133bb7a840b7a4225c14e786d543aeae079b3173b58017",
 	},
-	{
 	"3.1.6" : []string{
 		"2e11536d4667402d30befdbb050bba992a12eb9d95303d546038a37d848a92a6",
 	},
@@ -476,10 +475,8 @@ var vulnerabilities = map[string][]CVE{
 	"2.17.0": []CVE{
 		CVE_2021_44832,
 	},
-	{
 	"3.6.1": []CVE{
 		CVE_2022_22963,
-	},
 	},
 }
 
