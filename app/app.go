@@ -152,6 +152,11 @@ var signatures = map[string][]string{
 	"2.17.1": []string{
 		"7e9ee383f6c730557c133bb7a840b7a4225c14e786d543aeae079b3173b58017",
 	},
+	{
+	"3.1.6" : []string{
+		"2e11536d4667402d30befdbb050bba992a12eb9d95303d546038a37d848a92a6",
+	},
+	}
 }
 
 type CVE struct {
@@ -159,6 +164,15 @@ type CVE struct {
 	Description string
 	Reference   []string
 	Score       float64
+}
+
+var CVE_2022_22963 = CVE {
+	ID: "CVE-2022-22963"
+	Description: `Spring Expression Resource Access Vulnerability`
+	Reference: []string{
+		"https://www.lunasec.io/docs/blog/spring-rce-vulnerabilities/",
+		"https://tanzu.vmware.com/security/cve-2022-22963"
+	}
 }
 
 var CVE_2021_44228 = CVE{
@@ -463,6 +477,11 @@ var vulnerabilities = map[string][]CVE{
 	"2.17.0": []CVE{
 		CVE_2021_44832,
 	},
+	{
+	"3.6.1": [CVE]{
+		CVE_2022_22963
+	}
+	},
 }
 
 var fileSignatures = []struct {
@@ -512,6 +531,7 @@ var fileSignatures = []struct {
 	{"JndiLookup.class", "ddad241274b834182525eeddc35c3198247507bd2df59645b58b94cd18fada7c", "2.17.0"},
 	{"JndiLookup.class", "edb797a8633f629b7c2187ccafd259a16a0b7b4cce4d42e646f8472358b8962a", "2.12.3"},
 	{"JndiLookup.class", "ddad241274b834182525eeddc35c3198247507bd2df59645b58b94cd18fada7c", "2.17.1"},
+	{"Spring-cloud-function-core", "2e11536d4667402d30befdbb050bba992a12eb9d95303d546038a37d848a92a6", "3.6.1"},
 }
 
 func findFileHashes(hash []byte) []string {
