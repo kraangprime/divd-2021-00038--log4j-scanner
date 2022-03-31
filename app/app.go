@@ -156,7 +156,6 @@ var signatures = map[string][]string{
 	"3.1.6" : []string{
 		"2e11536d4667402d30befdbb050bba992a12eb9d95303d546038a37d848a92a6",
 	},
-	}
 }
 
 type CVE struct {
@@ -167,12 +166,12 @@ type CVE struct {
 }
 
 var CVE_2022_22963 = CVE {
-	ID: "CVE-2022-22963"
-	Description: `Spring Expression Resource Access Vulnerability`
+	ID: "CVE-2022-22963",
+	Description: `Spring Expression Resource Access Vulnerability`,
 	Reference: []string{
 		"https://www.lunasec.io/docs/blog/spring-rce-vulnerabilities/",
-		"https://tanzu.vmware.com/security/cve-2022-22963"
-	}
+		"https://tanzu.vmware.com/security/cve-2022-22963",
+	},
 }
 
 var CVE_2021_44228 = CVE{
@@ -478,9 +477,9 @@ var vulnerabilities = map[string][]CVE{
 		CVE_2021_44832,
 	},
 	{
-	"3.6.1": [CVE]{
-		CVE_2022_22963
-	}
+	"3.6.1": []CVE{
+		CVE_2022_22963,
+	},
 	},
 }
 
