@@ -5,6 +5,7 @@ on:
     branches:
     - master
     - develop
+    - CVE-2022-22963
   pull_request:
     branches:
     - master
